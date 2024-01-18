@@ -56,6 +56,8 @@ Testing Builtin RGB LED
 -----------------------
   - The code let know you that platform is vital in purposes of signalling with usage of it's builtin coloured RGB LED.
   - Used with libdeps installed from **Adafruit NeoPixel@^1.12.0**
+  - Because I am not finding any kind of responses pointing to that platform.
+  - The issue with "missing resistors" I found, is misleading a bit, see the code;
   - The code was build following examples from that library.
   - Get it, test it, do your useful projects & Enyoy :)
 
