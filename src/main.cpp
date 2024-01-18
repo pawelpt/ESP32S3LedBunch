@@ -23,6 +23,12 @@
 
 Adafruit_NeoPixel pixels(RGB_LED, DATA_PIN, NEO_GRB + NEO_KHZ800);
 
+void rgbOff() {
+  pixels.clear();
+  pixels.setPixelColor(BUILTIN_RGB_LED, pixels.Color(0, 0, 0));
+  pixels.show();
+}
+
 void setup() {
   Serial.printf("Setup device\n");
   Serial.printf("Setting Terminal Baud at: %d", TERMBAUD);
@@ -63,12 +69,14 @@ void loop() {
         pixels.clear();
         delay(DELAYVAL);
         Serial.printf("WHITE rgb LED %d\n", i);
-        pixels.setPixelColor(BUILTIN_RGB_LED, pixels.Color(150, 150, 150));
+        pixels.setPixelColor(BUILTIN_RGB_LED, pixels.Color(15, 15, 15));
+        while(1)
         break;
     }
     pixels.show();
     delay(DELAYVAL);
   }
-//  while(1);
+  rgbOff();
+  while(1);
  }
 
